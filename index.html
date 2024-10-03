@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+</head>
+<body>
+    <!-- 1 & 2: Title with id="title" -->
+    <h1 id="title">Survey Form</h1> <!-- This fulfills the requirement for an h1 with id="title" and non-empty text -->
+
+    <!-- 3 & 4: Short explanation with id="description" -->
+    <p id="description">Please fill out this survey to help us improve our services.</p> <!-- This fulfills the requirement for a p element with id="description" and non-empty text -->
+
+    <!-- 5: Form with id="survey-form" -->
+    <form id="survey-form">
+
+        <!-- 6-9: Name Input with id="name" and corresponding label -->
+        <label id="name-label" for="name">Name:</label> <!-- 19: Label with id="name-label" -->
+        <input type="text" id="name" name="name" placeholder="Enter your name" required> <!-- 7 & 8: Input type="text" with id="name", required field -->
+
+        <!-- 10-13: Email Input with id="email" and corresponding label -->
+        <label id="email-label" for="email">Email:</label> <!-- 20: Label with id="email-label" -->
+        <input type="email" id="email" name="email" placeholder="Enter your email" required> <!-- 11 & 12: Input type="email" with id="email", required field -->
+
+        <!-- 14-18: Number Input with id="number" and corresponding label -->
+        <label id="number-label" for="number">Age (optional):</label> <!-- 21: Label with id="number-label" -->
+        <input type="number" id="number" name="number" min="1" max="120" placeholder="Enter your age"> <!-- 16: Input type="number" with min and max attributes -->
+
+        <!-- 31-33: Dropdown with id="dropdown" -->
+        <label for="dropdown">What best describes your current role?</label>
+        <select id="dropdown" name="role" required>
+            <option value="">Select an option</option> <!-- Placeholder -->
+            <option value="student">Student</option>
+            <option value="professional">Professional</option>
+            <option value="learner">Full-time learner</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- 34-38: Radio Buttons with corresponding group name -->
+        <fieldset>
+            <legend>Would you recommend this survey to others?</legend>
+            <label>
+                <input type="radio" name="recommend" value="yes" required> Yes <!-- Each radio button has value and name attributes -->
+            </label>
+            <label>
+                <input type="radio" name="recommend" value="no"> No
+            </label>
+            <label>
+                <input type="radio" name="recommend" value="maybe"> Maybe
+            </label>
+        </fieldset>
+
+        <!-- 39-40: Checkboxes -->
+        <fieldset>
+            <legend>Which areas would you like us to improve?</legend>
+            <label>
+                <input type="checkbox" name="improvement" value="ux-ui"> UX/UI Design
+            </label>
+            <label>
+                <input type="checkbox" name="improvement" value="content"> Content Quality
+            </label>
+            <label>
+                <input type="checkbox" name="improvement" value="features"> Features
+            </label>
+        </fieldset>
+
+        <!-- 41: Text Area for Comments -->
+        <label for="comments">Additional comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Your feedback..."></textarea>
+
+        <!-- 42-44: Submit Button -->
+        <button type="submit" id="submit">Submit</button> <!-- Submit button with id="submit" and type="submit" -->
+    </form>
+</body>
+</html>
